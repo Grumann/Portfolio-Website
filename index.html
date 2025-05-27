@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta chartahset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PINYI SAMUEL GRUMANN PORTFOLIO WEBSITE</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body> 
+    <div id="Header">
+            <div class="Container">
+        <nav>
+            <img src="images/PinyiLogo.png" class="Logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Protfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    </div>
+
+     <div class="Header-Text">
+            <p>Java Programmer</p>
+            <h1>Hey,I'm <span style="color: palevioletred;">Pinyi Samuel Grumann</span> from Kampala Uganda.</h1>
+         </div>
+       <!-----------------About-------------->
+     <div id="About">
+        <div class="Container">
+            <div class="Row">
+               <div class="About-Col-1">
+                    <img src="images/About.jpg" height="500px" width="400px" border-radius="100px "> 
+               </div> 
+               <div class="About-Col-2">
+                    <h1>About Me</h1>
+                    <p>
+                        Hi I'm a junior Java developer passionate about coding and problem-solving. I enjoy building applications, learning new technologies, and improving my skills.
+                        I specialize in Java programming, creating simple and efficient code, and exploring back-end development. I'm always eager to learn, grow, and take on exciting projects that challenge me.
+                        Let's connect and build something great!
+                    </p>
+               <div class="Tab-Titles">
+                    <p class="Tab-Links active-link" onclick="opentab('Skills')">Skills</p>
+                    <p class="Tab-Links" onclick="opentab('Experience')">Experience</p>
+                    <p class="Tab-Links" onclick="opentab('Education')">Education</p>
+               </div>
+               <div class="Tab-Contents active-tab" id="Skills">
+                    <ul>
+                        <li><span>Java Programmer</span><br>Back-End</li>
+                        <li><span>C #(Sharp) Programmer</span><br>Back-End</li>
+                        <li><span>DataBase Programmer</span><br>MSSM</li>
+                    </ul>
+               </div>
+                <div class="Tab-Contents" id="Experience">
+                    <ul>
+                        <li><span></span><br></li>
+                        <li><span></span><br></li>
+                        <li><span></span><br></li>
+                    </ul>
+               </div>
+                 <div class="Tab-Contents" id="Education">
+                    <ul>
+                        <li><span>Primary School:Nakasero Primary School</span><br>Years:2010-2016</li>
+                        <li><span>Secondary School:GreenHill Academy</span><br>Years:2017-2021<br></li>
+                        <li><span>Secondary School:Kitante Hill School</span><br>Years:2022-2023<br></li>
+                        <li><span>University:ISBAT University</span><br>Years:2024-2025</li>
+                    </ul>
+               </div>
+            </div>
+          </div>
+        </div>
+     </div>
+     <script>
+var TabLinks = document.getElementsByClassName("Tab-Links");
+var TabContents = document.getElementsByClassName("Tab-Contents");
+
+function opentab(tabname) {
+    // Remove the "active-link" class from all TabLinks
+    for (let TabLink of TabLinks) {
+        TabLink.classList.remove("active-link");  // Correct method
+    }
+    
+    // Remove the "active-tab" class from all TabContents
+    for (let TabContent of TabContents) {
+        TabContent.classList.remove("active-tab");  // Correct method
+    }
+    
+    // Add active class to the clicked tab link
+    event.currentTarget.classList.add("active-link");
+
+    // Show the correct tab content
+    document.getElementById(tabname).classList.add("active-tab");
+}
+           
+     </script>
+</body>
+</html>
