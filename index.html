@@ -5,23 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PINYI SAMUEL GRUMANN PORTFOLIO WEBSITE</title>
     <link rel="stylesheet" href="Style.css">
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
 </head>
 <body> 
     <div id="Header">
-
             <div class="Container">
+                <img src="images/PinyiLogo.png" class="Logo">
         <nav>
-            <img src="images/PinyiLogo.png" class="Logo">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Protfolio</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
         </nav>
     </div>
     </div>
+    <script>
+        const Nav = document.querySelector("nav");
+        const ToggleBtn=Nav.querySelector("tog-button");
+        ToggleBtn.addEventListener("Click" , () =>{
+            Nav.classList.toggle("Open"); });
+
+            function onDrag({movementY}){ const navStyle=window.getComputedStyle(Nav), navTop=parseInt(navStyle.top),
+                navHeight=parseInt(navStyle.height), windHeight=window.innerHeight;
+
+                Nav.style.top=navTop>0?`${navTop + movementY}px`:"1px";
+                if(navTop>windHeight - navHeight){
+                    Nav.style.top=`${windHeight - navHeight}px`;
+                }
+            }
+
+            Nav.addEventListener("mousedown",() =>{
+                Nav.removeEventListener("mousemove",onDrag);
+            });
+
+            Nav.addEventListener("mouseleave",()=>{
+                Nav.removeEventListener("mousemove",onDrag);
+            });
+    </script>
 
      <div class="Header-Text">
             <p>Java Programmer</p>
