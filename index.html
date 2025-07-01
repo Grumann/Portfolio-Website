@@ -5,13 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PINYI SAMUEL GRUMANN PORTFOLIO WEBSITE</title>
     <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body> 
     <div id="Header">
             <div class="Container">
-                <img src="images/PinyiLogo.png" class="Logo">
-        <nav>
-        </nav>
+    <nav>
+         <img src="images/PinyiLogo.png" class="Logo">
+        <ul class="Nav-Icons">
+            <li><a href="#"><i class="fa-solid fa-house"></i>Home</a></li>
+            <li><a href="ContactMe.html"><i class="fa-solid fa-address-book"></i>Contacts</i></a></li>
+            <li><a href="MyResume.html"><i class="fa-solid fa-file"></i></i>My-Resume</a></li>
+            <li><a href="Projects.html"><i class="fa-solid fa-diagram-project">Projects</i></i></a></li>
+        </ul>
+    </nav>
     </div>
     </div>
      <div class="Header-Text">
@@ -63,28 +70,18 @@
           </div>
         </div>
      </div>
+     <script src="https://kit.fontawesome.com/03aefa86cd.js" crossorigin="anonymous"></script>
      <script>
-var TabLinks = document.getElementsByClassName("Tab-Links");
-var TabContents = document.getElementsByClassName("Tab-Contents");
-
-function opentab(tabname) {
-    // Remove the "active-link" class from all TabLinks
-    for (let TabLink of TabLinks) {
-        TabLink.classList.remove("active-link");  // Correct method
-    }
-    
-    // Remove the "active-tab" class from all TabContents
-    for (let TabContent of TabContents) {
-        TabContent.classList.remove("active-tab");  // Correct method
-    }
-    
-    // Add active class to the clicked tab link
-    event.currentTarget.classList.add("active-link");
-
-    // Show the correct tab content
-    document.getElementById(tabname).classList.add("active-tab");
-}
-           
+        var TabLinks=document.getElementsByClassName("Tab-Links");
+        var TabContents=document.getElementsByClassName("Tab-Contents");
+        function opentab(TabName){
+            for(TabLink of TabLinks){
+                TabLink.classList.remove("active-link");
+            }
+             for( TabContent of TabContents){
+                TabContent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(TabName).classList.add("active-tab");
+        }
      </script>
-</body>
-</html>
