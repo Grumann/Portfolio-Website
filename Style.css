@@ -265,4 +265,76 @@ nav {
 .About-Col-1 img:hover {
     transform: scale(1.1); /* Slight zoom effect on hover */
 }
+/* Mobile Responsiveness - Media Query */
+@media screen and (max-width: 768px) {
+    /* Header adjustments */
+    #Header {
+        height: auto;
+        padding-bottom: 50px;
+    }
+    
+    .Logo {
+        width: 70px;
+        height: 70px;
+        margin-right: 0;
+    }
+    
+    .Header-Text {
+        margin-top: 120px;
+        padding-left: 20px;
+        text-align: center;
+    }
+    
+    .Header-Text p {
+        font-size: 30px;
+    }
+    
+    .Header-Text h1 {
+        font-size: 24px;
+        white-space: normal;
+        animation: none;
+        border-right: none;
+    }
+    
+    /* Navigation adjustments */
+    .Nav-Icons {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 10px;
+    }
+    
+    .Nav-Icons a {
+        font-size: 18px;
+    }
+    
+    /* About section adjustments */
+    .Row {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .About-Col-1 img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .About-Col-2 h1 {
+        font-size: 32px;
+        text-align: center;
+    }
+    
+    .Tab-Titles {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .Tab-Links {
+        margin-right: 0;
+    }
+    
+    /* Remove animations on mobile */
+    .Tab-Links {
+        animation: none;
+    }
+}
 

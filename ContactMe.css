@@ -112,3 +112,21 @@ button[type="submit"]:hover {
     background-color: #d81b60; /* Darker pink color on hover */
     transform: scale(1.05); /* Slightly enlarge the button on hover */
 }
+@media screen and (max-width: 768px) {
+    .container {
+        margin: 15px auto;
+        padding: 20px;
+    }
+    
+    .contact-form, .contact-info, .socials {
+        padding: 0 10px;
+    }
+    
+    .socials li {
+        margin-bottom: 15px;
+    }
+    
+    button[type="submit"] {
+        width: 100%;
+    }
+}
