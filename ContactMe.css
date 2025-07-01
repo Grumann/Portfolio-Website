@@ -1,71 +1,114 @@
+/* ContactMe.css */
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff;
     color: #333;
     margin: 0;
     padding: 0;
 }
 
 .container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 50px 0;
+    max-width: 960px;
+    margin: 30px auto;
+    background: #fff;
+    border: 2px solid #f4a6c1;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 192, 203, 0.3);
+    padding: 40px;
 }
 
-h1 {
+h1, h2 {
     text-align: center;
-    color: #444;
-}
-
-.contact-form {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
+    color: #f06292;
 }
 
 .contact-form label {
-    font-weight: bold;
     display: block;
-    margin-top: 10px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #444;
 }
 
-.contact-form input,
-.contact-form textarea {
+input[type="text"],
+input[type="email"],
+textarea {
     width: 100%;
     padding: 10px;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    background-color: #fff0f5;
+    color: #333;
 }
 
-.contact-form button {
-    background-color: palevioletred;
+textarea {
+    height: 120px;
+    resize: vertical
+}
+
+/* Send Message Button */
+button[type="submit"] {
+    background-color: #f06292; /* Pink */
     color: white;
-    padding: 10px 20px;
     border: none;
-    border-radius: 5px;
+    padding: 12px 30px;
+    font-size: 1rem;
+    border-radius: 6px;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.contact-form button:hover {
-    background-color: darkviolet;
+button[type="submit"]:hover {
+    background-color: #c2185b; /* Deeper pink */
+    transform: scale(1.05);
 }
 
-.contact-info, .socials {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* Phone Number */
+.contact-info p {
+    font-size: 1.1rem;
+    color: #000;
+    background-color: #ffe4ec;
+    padding: 10px 15px;
+    border-left: 4px solid #f06292;
+    border-radius: 4px;
+    margin: 10px 0;
+    font-weight: 500;
+}
+
+/* Social Media Icons */
+.socials li {
+    list-style: none;
+    margin-bottom: 10px;
 }
 
 .socials a {
-    color: palevioletred;
     text-decoration: none;
+    color: #f06292;
+    font-size: 1.1rem;
+    display: inline-flex;
+    align-items: center;
+}
+/* Back to Homepage Button */
+.back-to-main {
+    text-align: center;
+    margin-top: 30px;
 }
 
-.socials a:hover {
-    text-decoration: underline;
+.back-to-main button {
+    padding: 12px 25px;
+    background-color: #e91e63; /* Pink color */
+    color: white;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back-to-main button:hover {
+    background-color: #d81b60; /* Darker pink color on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
 }

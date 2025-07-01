@@ -4,8 +4,8 @@
     box-sizing: border-box;
 }
 body{
-background-color: black;
-color: white;
+background-color: #F5F5DC;;
+color: black;
 }
 #Header{
     width: 100%;
@@ -18,9 +18,12 @@ color: white;
 }
 
     .Logo{
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
     margin-right: 300px;
+    
+
+     
 }
 .Header-Text{
     margin-top: -350px;
@@ -43,6 +46,7 @@ h1{
     padding-right: 100px;
     padding-bottom: 100px;
     height: 20px;
+    font-weight: bolder;
 }
 .Row{
     display: flex;
@@ -119,14 +123,17 @@ p{
     
 }
 nav {
+    width: 100%; /* Ensures it fills the whole screen */
     display: flex;
     align-items: center; 
     justify-content: space-between; 
-    padding: 10px 20px;
+  padding: 5px 15px;
     position: fixed;
-    background-color: rgb(0,0,0 ,0.7);
-    backdrop-filter: blur(50px); /* Optional: blur effect for background */
+    background-color: rgba(0, 0, 0, 0.7); /* transparent dark background */
+    backdrop-filter: blur(50px);
     top: 0;
+    left: 0; /* Ensure it sticks to the very left */
+    z-index: 999; /* Stay on
 }
 
 .Nav-Icons {
@@ -258,5 +265,4 @@ nav {
 .About-Col-1 img:hover {
     transform: scale(1.1); /* Slight zoom effect on hover */
 }
-
 

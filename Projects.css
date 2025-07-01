@@ -1,77 +1,155 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #fff; /* White background for the body */
+    color: #333; /* Dark text for readability */
     margin: 0;
     padding: 0;
 }
 
 .container {
     width: 90%;
-    margin: 0 auto;
+    margin: 50px auto;
     max-width: 1200px;
+    padding: 20px;
 }
 
 header {
     text-align: center;
-    margin: 50px 0;
+    margin-bottom: 50px;
 }
 
 header h1 {
+    color: #e91e63; /* Pink color for the title */
     font-size: 2.5em;
-    color: #333;
+    margin-bottom: 10px;
 }
 
 header p {
+    color: #333; /* Dark text for paragraph */
     font-size: 1.2em;
-    color: #666;
 }
 
+/* Projects Section */
 .projects {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 30px;
     justify-content: space-around;
 }
 
 .project-card {
-    background-color: #fff;
+    background-color: #fff; /* White background for project cards */
+    width: 30%;
     padding: 20px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    width: 30%;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
+}
+
+.project-card:hover {
+    transform: translateY(-10px); /* Slight lift effect on hover */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
 .project-card img {
     width: 100%;
     height: auto;
     border-radius: 8px;
-    max-height: 200px;
-    object-fit: cover;
-}
-
-.project-card h3 {
-    font-size: 1.8em;
-    margin: 15px 0;
+    margin-bottom: 15px;
 }
 
 .project-card p {
+    color: #333; /* Dark text for project description */
     font-size: 1em;
-    color: #666;
+    margin-bottom: 20px;
 }
 
-.btn {
-    display: inline-block;
-    background-color: #007bff;
-    color: white;
+.project-card .btn {
     padding: 10px 20px;
+    background-color: #e91e63; /* Pink button background */
+    color: white;
     text-decoration: none;
-    border-radius: 5px;
-    margin-top: 10px;
     font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-.btn:hover {
-    background-color: #0056b3;
+.project-card .btn:hover {
+    background-color: #d81b60; /* Darker pink color on hover */
+}
+
+/* Project Title Square Boxes with Animations */
+.project-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    padding: 20px;
+    background-color: #e91e63; /* Pink background for title */
+    color: white;
+    display: inline-block;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    animation: slideIn 1s ease-out, pulse 2s infinite;
+}
+
+/* Slide-in animation for the title */
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Pulse effect animation for the title */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Back to Main Page Button */
+.back-to-main {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.back-to-main button {
+    padding: 12px 25px;
+    background-color: #e91e63; /* Pink color */
+    color: white;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back-to-main button:hover {
+    background-color: #d81b60; /* Darker pink color on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project-card {
+        width: 100%;
+        margin-bottom: 30px;
+    }
 }
